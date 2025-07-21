@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Me</title>
+  <style>
+    body {
+      background-color: #f9f9f9;
+      color: #222;
+      font-family: sans-serif;
+      margin: 2rem auto;
+      max-width: 600px;
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+    h1 {
+      color: #333;
+    }
+    h2 {
+      color: #666;
+    }
+    header, footer {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    footer {
+      font-size: 0.9rem;
+      color: #888;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>James Sorrenti</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2><i>Finding ways to help people in a technical world.</i></h2>
+    </section>
+
+    <section>
+     &bull; <a href="https://linkedin.com/in/jsorrenti" target="_blank">linkedin.com/in/jsorrenti</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> James Sorrenti</p>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
