@@ -9,7 +9,7 @@
     {{ else if eq . "StackOverflow" }}
       <a href="https://stackoverflow.com/users/{{$id}}" target="_blank" rel="noopener" title="StackExchange"><i class="fab fa-stack-overflow fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Slack" }}
-      <a href="https://x.com/{{$id}}" target="_blank" rel="noopener" title="X"><i class="fab fa-x fa-3x" aria-hidden="true"></i></a>
+      <a href="{{$id}}" target="_blank" rel="noopener" title="Slack"><i class="fab fa-slack fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Mastodon" }}
       <a href="{{$id}}" target="_blank" rel="noopener" title="Mastodon"><i class="fab fa-mastodon fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Bluesky" }}
@@ -58,11 +58,11 @@
       <a href="{{$id}}" target="_blank" rel="noopener" title="Curriculum Vitae"><i class="fas fa-file-alt fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "RSS" }}
       <a href="{{$id}}" target="_blank" rel="noopener" title="RSS"><i class="fa fa-rss fa-3x" aria-hidden="true"></i></a>
-    {{/* custom social types */}}
+    {{/* custom social types */}} 
     {{ else if eq . "Meeting" }}
       <a href="{{$id}}" target="_blank" rel="noopener" title="Meeting"><i class="fas fa-calendar-days fa-3x" aria-hidden="true"></i></a>
-    {{ end }}
-      <a href="{{$id}}" target="_blank" rel="noopener" title="Slack"><i class="fab fa-slack fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "X" }}
+      <a href="https://x.com/{{$id}}" target="_blank" rel="noopener" title="X"><i class="fab fa-x fa-3x" aria-hidden="true"></i></a>
+    {{ end }}
   {{ end }}
 {{ end }}
