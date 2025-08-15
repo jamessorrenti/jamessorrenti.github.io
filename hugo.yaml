@@ -1,0 +1,27 @@
+baseURL: "https://jamessorrenti.github.io"
+title: "James Sorrenti"
+theme: "hugo-theme-nix"
+languageCode: "en-us"
+
+# menu:
+#   header:
+#     - name: "post"
+#       weight: 0
+#       url: "post"
+#     - name: "about"
+#       weight: 1
+#       url: "about"
+
+params:
+  Name: "James Sorrenti"
+  HeaderUsername: "root"
+  HeaderHostname: "jamessorrenti.com"
+  LinkedInID: "jsorrenti"
+  Email: "jsorrenti@mac.com"
+  GithubID: "jamessorrenti"
+  About: |
+    I’m driven by a simple goal: helping people succeed in a technical world.
+    
+    With decades of experience and a deep curiosity for how things work, I’ve led teams, supported organizations, and bridged the gap between technical solutions and real human needs. When I'm not at a keyboard, you’ll probably find me diving into retro video games or making sawdust in the garage.
+  ProfilePicture: "/profile.png"
+  Favicon: "/favicon.ico"
