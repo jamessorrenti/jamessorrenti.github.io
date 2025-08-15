@@ -3,66 +3,66 @@
   {{ $id := index $.Site.Params (print . "ID") }}
   {{ if $id }}
     {{ if eq . "GnuPGFingerprint" }}
-      <a href="https://keys.openpgp.org/search?q={{$id}}" title="GPG"><i class="fas fa-unlock-alt fa-3x" aria-hidden="true"></i></a>
+      <a href="https://keys.openpgp.org/search?q={{$id}}" target="_blank" rel="noopener" title="GPG"><i class="fas fa-unlock-alt fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "StackExchange" }}
-      <a href="https://stackexchange.com/users/{{$id}}" rel="me" title="StackExchange"><i class="fab fa-stack-exchange fa-3x" aria-hidden="true"></i></a>
+      <a href="https://stackexchange.com/users/{{$id}}" target="_blank" rel="noopener" title="StackExchange"><i class="fab fa-stack-exchange fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "StackOverflow" }}
-      <a href="https://stackoverflow.com/users/{{$id}}" rel="me" title="StackExchange"><i class="fab fa-stack-overflow fa-3x" aria-hidden="true"></i></a>
+      <a href="https://stackoverflow.com/users/{{$id}}" target="_blank" rel="noopener" title="StackExchange"><i class="fab fa-stack-overflow fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Slack" }}
-      <a href="{{$id}}" title="Slack"><i class="fab fa-slack fa-3x" aria-hidden="true"></i></a>
-    {{ else if eq . "Twitter" }}
-      <a href="https://twitter.com/{{$id}}" rel="me" title="Twitter"><i class="fab fa-twitter fa-3x" aria-hidden="true"></i></a>
+      <a href="https://x.com/{{$id}}" target="_blank" rel="noopener" title="X"><i class="fab fa-x fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Mastodon" }}
-      <a href="{{$id}}" rel="me" title="Mastodon"><i class="fab fa-mastodon fa-3x" aria-hidden="true"></i></a>
+      <a href="{{$id}}" target="_blank" rel="noopener" title="Mastodon"><i class="fab fa-mastodon fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Bluesky" }}
-      <a href="https://bsky.app/profile/{{$id}}" title="Bluesky"><i class="fab fa-bluesky fa-3x" aria-hidden="true"></i></a>
+      <a href="https://bsky.app/profile/{{$id}}" target="_blank" rel="noopener" title="Bluesky"><i class="fab fa-bluesky fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Googleplus" }}
-      <a href="https://plus.google.com/{{$id}}/about" rel="me" title="Google+"><i class="fab fa-google-plus fa-3x" aria-hidden="true"></i></a>
+      <a href="https://plus.google.com/{{$id}}/about" target="_blank" rel="noopener" title="Google+"><i class="fab fa-google-plus fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Facebook" }}
-      <a href="https://facebook.com/{{$id}}" rel="me" title="Facebook"><i class="fab fa-facebook fa-3x" aria-hidden="true"></i></a>
+      <a href="https://facebook.com/{{$id}}" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Bitbucket" }}
-      <a href="https://bitbucket.org/{{$id}}" rel="me" title="Bitbucket"><i class="fab fa-bitbucket fa-3x" aria-hidden="true"></i></a>
+      <a href="https://bitbucket.org/{{$id}}" target="_blank" rel="noopener" title="Bitbucket"><i class="fab fa-bitbucket fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "GitHub" }}
-      <a href="https://github.com/{{$id}}" rel="me" title="GitHub"><i class="fab fa-github fa-3x" aria-hidden="true"></i></a>
+      <a href="https://github.com/{{$id}}" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "GitLab" }}
-      <a href="https://gitlab.com/{{$id}}" rel="me" title="GitLab"><i class="fab fa-gitlab fa-3x" aria-hidden="true"></i></a>
+      <a href="https://gitlab.com/{{$id}}" target="_blank" rel="noopener" title="GitLab"><i class="fab fa-gitlab fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Codepen" }}
-      <a href="https://codepen.io/{{$id}}" rel="me" title="Codepen"><i class="fab fa-codepen fa-3x" aria-hidden="true"></i></a>
+      <a href="https://codepen.io/{{$id}}" target="_blank" rel="noopener" title="Codepen"><i class="fab fa-codepen fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "LinkedIn" }}
-      <a href="https://linkedin.com/in/{{$id}}" rel="me" title="LinkedIn"><i class="fab fa-linkedin fa-3x" aria-hidden="true"></i></a>
+      <a href="https://linkedin.com/in/{{$id}}" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Medium" }}
-      <a href="https://medium.com/@{{$id}}" rel="me" title="Medium"><i class="fab fa-medium fa-3x" aria-hidden="true"></i></a>
+      <a href="https://medium.com/@{{$id}}" target="_blank" rel="noopener" title="Medium"><i class="fab fa-medium fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Youtube" }}
-      <a href="https://youtube.com/{{$id}}" rel="me" title="Youtube"><i class="fab fa-youtube fa-3x" aria-hidden="true"></i></a>
+      <a href="https://youtube.com/{{$id}}" target="_blank" rel="noopener" title="Youtube"><i class="fab fa-youtube fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Twitch" }}
-      <a href="https://twitch.tv/{{$id}}" rel="me" title="Twitch"><i class="fab fa-twitch fa-3x" aria-hidden="true"></i></a>
+      <a href="https://twitch.tv/{{$id}}" target="_blank" rel="noopener" title="Twitch"><i class="fab fa-twitch fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Spotify" }}
-      <a href="https://open.spotify.com/user/{{$id}}" rel="me" title="Spotify"><i class="fab fa-spotify fa-3x" aria-hidden="true"></i></a>
+      <a href="https://open.spotify.com/user/{{$id}}" target="_blank" rel="noopener" title="Spotify"><i class="fab fa-spotify fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Soundcloud" }}
-      <a href="https://soundcloud.com/{{$id}}" rel="me" title="Soundcloud"><i class="fab fa-soundcloud fa-3x" aria-hidden="true"></i></a>
+      <a href="https://soundcloud.com/{{$id}}" target="_blank" rel="noopener" title="Soundcloud"><i class="fab fa-soundcloud fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Instagram" }}
-      <a href="https://instagram.com/{{$id}}" rel="me" title="Instagram"><i class="fab fa-instagram fa-3x" aria-hidden="true"></i></a>
+      <a href="https://instagram.com/{{$id}}" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Telegram" }}
-      <a href="https://t.me/{{$id}}" rel="me" title="Telegram"><i class="fab fa-telegram fa-3x" aria-hidden="true"></i></a>
+      <a href="https://t.me/{{$id}}" target="_blank" rel="noopener" title="Telegram"><i class="fab fa-telegram fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Reddit" }}
-      <a href="https://reddit.com/user/{{$id}}" rel="me" title="Reddit"><i class="fab fa-reddit fa-3x" aria-hidden="true"></i></a>
+      <a href="https://reddit.com/user/{{$id}}" target="_blank" rel="noopener" title="Reddit"><i class="fab fa-reddit fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Email" }}
-      <a href="mailto:{{$id}}" title="Email"><i class="fas fa-envelope fa-3x" aria-hidden="true"></i></a>
+      <a href="mailto:{{$id}}" target="_blank" rel="noopener" title="Email"><i class="fas fa-envelope fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Phone" }}
-      <a href="tel:{{$id}}" title="Phone"><i class="fas fa-phone fa-3x" aria-hidden="true"></i></a>
+      <a href="tel:{{$id}}" target="_blank" rel="noopener" title="Phone"><i class="fas fa-phone fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Mobile" }}
-      <a href="tel:{{$id}}" title="Mobile"><i class="fas fa-mobile fa-3x" aria-hidden="true"></i></a>
+      <a href="tel:{{$id}}" target="_blank" rel="noopener" title="Mobile"><i class="fas fa-mobile fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "PayPalMe" }}
-      <a href="https://www.paypal.me/{{$id}}" rel="me" title="PayPal.Me"><i class="fab fa-paypal fa-3x" aria-hidden="true"></i></a>
+      <a href="https://www.paypal.me/{{$id}}" target="_blank" rel="noopener" title="PayPal.Me"><i class="fab fa-paypal fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Xing" }}
-      <a href="{{$id}}" rel="me" title="XING"><i class="fab fa-xing fa-3x" aria-hidden="true"></i></a>
+      <a href="{{$id}}" target="_blank" rel="noopener" title="XING"><i class="fab fa-xing fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "Cv" }}
-      <a href="{{$id}}" title="Curriculum Vitae"><i class="fas fa-file-alt fa-3x" aria-hidden="true"></i></a>
+      <a href="{{$id}}" target="_blank" rel="noopener" title="Curriculum Vitae"><i class="fas fa-file-alt fa-3x" aria-hidden="true"></i></a>
     {{ else if eq . "RSS" }}
-      <a href="{{$id}}" title="RSS"><i class="fa fa-rss fa-3x" aria-hidden="true"></i></a>
-    {{/* new social type: Meeting */}}
+      <a href="{{$id}}" target="_blank" rel="noopener" title="RSS"><i class="fa fa-rss fa-3x" aria-hidden="true"></i></a>
+    {{/* custom social types */}}
     {{ else if eq . "Meeting" }}
       <a href="{{$id}}" target="_blank" rel="noopener" title="Meeting"><i class="fas fa-calendar-days fa-3x" aria-hidden="true"></i></a>
     {{ end }}
+      <a href="{{$id}}" target="_blank" rel="noopener" title="Slack"><i class="fab fa-slack fa-3x" aria-hidden="true"></i></a>
+    {{ else if eq . "X" }}
   {{ end }}
 {{ end }}
