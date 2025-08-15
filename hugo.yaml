@@ -1,6 +1,6 @@
 baseURL: "https://jamessorrenti.github.io"
 title: "James Sorrenti"
-theme: "hugo-theme-nix"
+theme: "nix"
 languageCode: "en-us"
 
 # menu:
