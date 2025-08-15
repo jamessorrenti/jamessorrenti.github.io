@@ -16,12 +16,25 @@ params:
   Name: "James Sorrenti"
   HeaderUsername: "root"
   HeaderHostname: "jamessorrenti.com"
+
+  Favicon: "/favicon.ico"
+  ProfilePicture: "/profile.png"
+
+  EmailID: "jsorrenti@mac.com"
+  GitHubID: "jamessorrenti"
   LinkedInID: "jsorrenti"
-  Email: "jsorrenti@mac.com"
-  GithubID: "jamessorrenti"
+  SlackID: "https://macadmins.slack.com/team/U0G0ESCKG"
+  MeetingID: "https://hub.mtsproservices.com/meetings/james-sorrenti"  # new social field
+
+  # Social display order
+  socialOrder:
+    - LinkedIn
+    - Slack
+    - Email
+    - GitHub
+    - Meeting   # new social type
+
   About: |
     I’m driven by a simple goal: helping people succeed in a technical world.
     
     With decades of experience and a deep curiosity for how things work, I’ve led teams, supported organizations, and bridged the gap between technical solutions and real human needs. When I'm not at a keyboard, you’ll probably find me diving into retro video games or making sawdust in the garage.
-  ProfilePicture: "/profile.png"
-  Favicon: "/favicon.ico"
