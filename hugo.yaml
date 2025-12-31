@@ -24,7 +24,7 @@ params:
   GitHubID: "jamessorrenti"
   LinkedInID: "jsorrenti"
   SlackID: "https://macadmins.slack.com/team/U0G0ESCKG"
-  MeetingID: "https://hub.mtsproservices.com/meetings/james-sorrenti"  # new social field
+ #  MeetingID: "https://{link}}"  # new social field
 
   # Social display order
   socialOrder:
@@ -32,7 +32,7 @@ params:
     - Slack
     - Email
     - GitHub
-    - Meeting   # new social type
+ #    - Meeting   # new social type
 
   About: |
     I’m driven by a simple goal: helping people succeed in a technical world.
