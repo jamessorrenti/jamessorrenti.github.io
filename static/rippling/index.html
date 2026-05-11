@@ -44,7 +44,7 @@
       margin-right: auto;
       font-size: 0.75rem;
       color: #969896;
-      transform: translateX(-28px); /* optical centre accounting for dots */
+      transform: translateX(-28px);
     }
 
     .card {
@@ -199,9 +199,10 @@
     </div>
 
     <footer>
-      <p>&copy; 2025 James Sorrenti &mdash; <a href="/">jamessorrenti.com</a></p>
+      <p>&copy; <span id="year"></span> James Sorrenti &mdash; <a href="/">jamessorrenti.com</a></p>
     </footer>
 
   </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
