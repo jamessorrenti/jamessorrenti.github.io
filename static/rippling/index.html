@@ -20,9 +20,10 @@
       padding: 2rem 1rem 3rem;
     }
 
+    /* Outer container — wide enough for the scheduler */
     .container {
       width: 100%;
-      max-width: 780px;
+      max-width: 980px;
     }
 
     /* Terminal-style header bar */
@@ -33,12 +34,11 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      margin-bottom: 0;
     }
     .dot { width: 12px; height: 12px; border-radius: 50%; }
-    .dot-red   { background: #cc6666; }
-    .dot-yellow{ background: #f0c674; }
-    .dot-green { background: #b5bd68; }
+    .dot-red    { background: #cc6666; }
+    .dot-yellow { background: #f0c674; }
+    .dot-green  { background: #b5bd68; }
     .terminal-title {
       margin-left: auto;
       margin-right: auto;
@@ -50,12 +50,18 @@
     .card {
       background-color: #282a2e;
       border-radius: 0 0 6px 6px;
-      padding: 2rem;
       border: 1px solid #373b41;
       border-top: none;
+      /* no padding here — sections handle their own */
+      overflow: hidden;
     }
 
-    /* Profile section */
+    /* Profile section constrained to a readable width */
+    .profile-section {
+      max-width: 720px;
+      padding: 2rem 2rem 0;
+    }
+
     .profile {
       display: flex;
       align-items: flex-start;
@@ -88,7 +94,6 @@
       color: #c5c8c6;
     }
 
-    /* LinkedIn link */
     .linkedin-link {
       display: inline-flex;
       align-items: center;
@@ -107,14 +112,16 @@
       color: #c5c8c6;
     }
 
-    /* Divider */
     .divider {
       border: none;
       border-top: 1px solid #373b41;
-      margin: 1.75rem 0;
+      margin: 1.75rem 0 0;
     }
 
-    /* Scheduler section */
+    /* Scheduler section — full card width */
+    .scheduler-section {
+      padding: 1.5rem 2rem 2rem;
+    }
     .scheduler-label {
       font-size: 0.75rem;
       color: #969896;
@@ -132,7 +139,7 @@
     .scheduler-wrapper iframe {
       display: block;
       width: 100%;
-      height: 900px;
+      height: 1050px;
       border: none;
     }
 
@@ -146,10 +153,11 @@
     footer a { color: #EAB8F2; text-decoration: none; }
     footer a:hover { text-decoration: underline; }
 
-    @media (max-width: 520px) {
+    @media (max-width: 600px) {
       .profile { flex-direction: column; align-items: center; text-align: center; }
       .profile img { width: 90px; height: 90px; }
-      .scheduler-wrapper iframe { height: 1000px; }
+      .profile-section, .scheduler-section { padding-left: 1rem; padding-right: 1rem; }
+      .scheduler-wrapper iframe { height: 1100px; }
     }
   </style>
 </head>
@@ -165,35 +173,38 @@
 
     <div class="card">
 
-      <div class="profile">
-        <img src="/profile.png" alt="James Sorrenti">
-        <div class="profile-text">
-          <h1>James Sorrenti</h1>
-          <div class="role">// Rippling</div>
-          <p>
-            I work with organizations to cut through operational complexity — helping teams
-            get their HR, IT, and Finance systems working together instead of against each other.
-            I bring a practitioner's perspective: I've built and run enterprise IT infrastructure,
-            so I know what friction looks like from the inside.
-            Whether you're evaluating Rippling or figuring out how to get more out of it,
-            I'm happy to dig in.
-          </p>
-          <a class="linkedin-link" href="https://linkedin.com/in/jsorrenti" target="_blank" rel="noopener">
-            <i class="fab fa-linkedin"></i> linkedin.com/in/jsorrenti
-          </a>
+      <div class="profile-section">
+        <div class="profile">
+          <img src="/profile.png" alt="James Sorrenti">
+          <div class="profile-text">
+            <h1>James Sorrenti</h1>
+            <div class="role">// Rippling</div>
+            <p>
+              I work with organizations to cut through operational complexity — helping teams
+              get their HR, IT, and Finance systems working together instead of against each other.
+              I bring a practitioner’s perspective: I’ve built and run enterprise IT infrastructure,
+              so I know what friction looks like from the inside.
+              Whether you’re evaluating Rippling or figuring out how to get more out of it,
+              I’m happy to dig in.
+            </p>
+            <a class="linkedin-link" href="https://linkedin.com/in/jsorrenti" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i> linkedin.com/in/jsorrenti
+            </a>
+          </div>
         </div>
+        <hr class="divider">
       </div>
 
-      <hr class="divider">
-
-      <div class="scheduler-label">$ <span>schedule --duration 30min</span></div>
-      <div class="scheduler-wrapper">
-        <iframe
-          src="https://rippling.zoom.us/zbook/james-sorrenti/30-min?embed=true"
-          frameborder="0"
-          title="Schedule a 30-minute meeting with James Sorrenti"
-          allowfullscreen>
-        </iframe>
+      <div class="scheduler-section">
+        <div class="scheduler-label">$ <span>schedule --duration 30min</span></div>
+        <div class="scheduler-wrapper">
+          <iframe
+            src="https://rippling.zoom.us/zbook/james-sorrenti/30-min?embed=true"
+            frameborder="0"
+            title="Schedule a 30-minute meeting with James Sorrenti"
+            allowfullscreen>
+          </iframe>
+        </div>
       </div>
 
     </div>
