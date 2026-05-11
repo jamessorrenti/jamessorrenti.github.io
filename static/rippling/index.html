@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet with James Sorrenti — Rippling</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #1d1f21;
+      color: #c5c8c6;
+      font-family: 'Courier New', Courier, monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem 3rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 780px;
+    }
+
+    /* Terminal-style header bar */
+    .terminal-bar {
+      background-color: #373b41;
+      border-radius: 6px 6px 0 0;
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0;
+    }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot-red   { background: #cc6666; }
+    .dot-yellow{ background: #f0c674; }
+    .dot-green { background: #b5bd68; }
+    .terminal-title {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 0.75rem;
+      color: #969896;
+      transform: translateX(-28px); /* optical centre accounting for dots */
+    }
+
+    .card {
+      background-color: #282a2e;
+      border-radius: 0 0 6px 6px;
+      padding: 2rem;
+      border: 1px solid #373b41;
+      border-top: none;
+    }
+
+    /* Profile section */
+    .profile {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.75rem;
+      margin-bottom: 2rem;
+    }
+    .profile img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 2px solid #373b41;
+      flex-shrink: 0;
+    }
+    .profile-text h1 {
+      font-size: 1.25rem;
+      color: #81a2be;
+      margin-bottom: 0.25rem;
+    }
+    .profile-text .role {
+      font-size: 0.8rem;
+      color: #b5bd68;
+      margin-bottom: 0.9rem;
+      letter-spacing: 0.04em;
+    }
+    .profile-text p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: #c5c8c6;
+    }
+
+    /* LinkedIn link */
+    .linkedin-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      color: #81a2be;
+      text-decoration: none;
+      border: 1px solid #373b41;
+      border-radius: 4px;
+      padding: 0.3rem 0.7rem;
+      transition: background 0.15s, color 0.15s;
+    }
+    .linkedin-link:hover {
+      background: #373b41;
+      color: #c5c8c6;
+    }
+
+    /* Divider */
+    .divider {
+      border: none;
+      border-top: 1px solid #373b41;
+      margin: 1.75rem 0;
+    }
+
+    /* Scheduler section */
+    .scheduler-label {
+      font-size: 0.75rem;
+      color: #969896;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+    .scheduler-label span { color: #b5bd68; }
+
+    .scheduler-wrapper {
+      width: 100%;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid #373b41;
+    }
+    .scheduler-wrapper iframe {
+      display: block;
+      width: 100%;
+      height: 560px;
+      border: none;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 2rem;
+      font-size: 0.72rem;
+      color: #969896;
+      text-align: center;
+    }
+    footer a { color: #81a2be; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 520px) {
+      .profile { flex-direction: column; align-items: center; text-align: center; }
+      .profile img { width: 90px; height: 90px; }
+      .scheduler-wrapper iframe { height: 620px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="terminal-bar">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+      <span class="terminal-title">james@rippling.com</span>
+    </div>
+
+    <div class="card">
+
+      <div class="profile">
+        <img src="/profile.png" alt="James Sorrenti">
+        <div class="profile-text">
+          <h1>James Sorrenti</h1>
+          <div class="role">// Rippling</div>
+          <p>
+            I work with organizations to cut through operational complexity — helping teams
+            get their HR, IT, and Finance systems working together instead of against each other.
+            I bring a practitioner's perspective: I've built and run enterprise IT infrastructure,
+            so I know what friction looks like from the inside.
+            Whether you're evaluating Rippling or figuring out how to get more out of it,
+            I'm happy to dig in.
+          </p>
+          <a class="linkedin-link" href="https://linkedin.com/in/jsorrenti" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin"></i> linkedin.com/in/jsorrenti
+          </a>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <div class="scheduler-label">$ <span>schedule --duration 30min</span></div>
+      <div class="scheduler-wrapper">
+        <iframe
+          src="https://rippling.zoom.us/zbook/james-sorrenti/30-min?embed=true"
+          frameborder="0"
+          title="Schedule a 30-minute meeting with James Sorrenti"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+    </div>
+
+    <footer>
+      <p>&copy; 2025 James Sorrenti &mdash; <a href="/">jamessorrenti.com</a></p>
+    </footer>
+
+  </div>
+</body>
+</html>
